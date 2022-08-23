@@ -9,6 +9,12 @@
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="11.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="6.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="6.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Analyzers" Version="6.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Forms" Version="6.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Metadata" Version="6.0.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.7">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -19,12 +25,20 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.JSInterop" Version="6.0.7" />
+    <PackageReference Include="Syncfusion.Blazor.Grid" Version="20.2.0.44" />
+    <PackageReference Include="Syncfusion.Blazor.Themes" Version="20.2.0.44" />
+    <PackageReference Include="TinyMCE.Blazor" Version="1.0.4" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\FirstApp_Business\FirstApp_Business.csproj" />
     <ProjectReference Include="..\FirstApp_DataAccess\FirstApp_DataAccess.csproj" />
     <ProjectReference Include="..\FirstApp_models\FirstApp_models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\images\product\" />
   </ItemGroup>
 
 </Project>

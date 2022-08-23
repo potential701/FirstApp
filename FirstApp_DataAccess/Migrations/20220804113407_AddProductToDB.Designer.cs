@@ -4,6 +4,7 @@ using FirstApp_DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FirstApp_DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220804113407_AddProductToDB")]
+    partial class AddProductToDB
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -82,31 +84,6 @@ namespace FirstApp_DataAccess.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("FirstApp_DataAccess.ProductPrice", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<double>("Price")
-                        .HasColumnType("float");
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Size")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProductId");
-
-                    b.ToTable("ProductPrices");
-                });
-
             modelBuilder.Entity("FirstApp_DataAccess.Product", b =>
                 {
                     b.HasOne("FirstApp_DataAccess.Category", "Category")
@@ -116,22 +93,6 @@ namespace FirstApp_DataAccess.Migrations
                         .IsRequired();
 
                     b.Navigation("Category");
-                });
-
-            modelBuilder.Entity("FirstApp_DataAccess.ProductPrice", b =>
-                {
-                    b.HasOne("FirstApp_DataAccess.Product", "Product")
-                        .WithMany("ProductPrices")
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Product");
-                });
-
-            modelBuilder.Entity("FirstApp_DataAccess.Product", b =>
-                {
-                    b.Navigation("ProductPrices");
                 });
 #pragma warning restore 612, 618
         }

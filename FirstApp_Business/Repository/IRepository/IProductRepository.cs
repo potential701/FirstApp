@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace FirstApp_Business.Repository.IRepository
 {
-	public interface ICategoryRepository
+	public interface IProductRepository
 	{
-		public Task<CategoryDTO> Create(CategoryDTO objDTO);
-		public Task<CategoryDTO> Update(CategoryDTO objDTO);
+		public Task<ProductDTO> Create(ProductDTO objDTO);
+		public Task<ProductDTO> Update(ProductDTO objDTO);
 		public Task<int> Deleted(int id);
-		public Task<CategoryDTO> Get(int id);
-		public Task<IEnumerable<CategoryDTO>> GetAll();
+		public Task<ProductDTO> Get(int id);
+		public Task<IEnumerable<ProductDTO>> GetAll();
 	}
 }

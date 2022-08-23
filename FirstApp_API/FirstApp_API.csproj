@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Syncfusion.Blazor.Grid" Version="20.2.0.44" />
+    <PackageReference Include="Syncfusion.Blazor.Themes" Version="20.2.0.44" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FirstApp_Business\FirstApp_Business.csproj" />
+    <ProjectReference Include="..\FirstApp_DataAccess\FirstApp_DataAccess.csproj" />
+  </ItemGroup>
+
+</Project>
