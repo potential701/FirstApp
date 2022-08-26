@@ -29,6 +29,7 @@
     <PackageReference Include="Microsoft.JSInterop" Version="6.0.7" />
     <PackageReference Include="Syncfusion.Blazor.Grid" Version="20.2.0.44" />
     <PackageReference Include="Syncfusion.Blazor.Themes" Version="20.2.0.44" />
+    <PackageReference Include="TinyMCE.Blazor" Version="1.0.4" />
   </ItemGroup>
 
 </Project>
